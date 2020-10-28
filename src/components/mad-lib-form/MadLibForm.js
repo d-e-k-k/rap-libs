@@ -1,10 +1,22 @@
 import React, {useState} from 'react';
 
 const MadLibForm = ({keyWords, setKeyWords}) => {
+    
+    function handleSubmit(event){
+        event.preventDefault();
+        console.log('working');
+    }
+    
+    function handleChange(event){
+			setKeyWords({ ...keyWords, [event.target.id]: event.target.value });
+        };
+        console.log(keyWords);
+
+   
     return (
         <div>
-            <form>
-                <input id='noun'placeholder='Noun' required/>
+            <form onSubmit={handleSubmit}>
+                <input onChange={handleChange} id='noun'placeholder='Noun' required/>
                 <button type='submit'>Submit</button>
             </form>
         </div>

@@ -5,6 +5,7 @@ import MadLibResults from '../mad-lib-results/MadLibResults'
 
 const App = () => {
     const [keyWords, setKeyWords] = useState([])
+    const [rhymingWords, setRhymingWords] = useState([])
     return (
         <div>
             <header>
@@ -14,10 +15,14 @@ const App = () => {
                 <MadLibForm 
                     keyWords={keyWords} 
                     setKeyWords={setKeyWords} 
+                    rhymingWords={rhymingWords}
+                    setRhymingWords={setKeyWords}
                 />
                 <MadLibResults
                     keyWords={keyWords} 
                     setKeyWords={setKeyWords}
+                    rhymingWords={rhymingWords}
+                    setRhymingWords={setKeyWords}
                 />
             </main>
         </div>

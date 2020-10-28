@@ -4,7 +4,8 @@ const MadLibResults = ({keyWords, setKeyWords}) => {
     console.log(keyWords.noun);
     return (
         <div>
-            
+            <p>{`Some people call me  ${keyWords.noun}`}</p>
+            <p>{'Others call me $ '}</p>
         </div>
     );
 };

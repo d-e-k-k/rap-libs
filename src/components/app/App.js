@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Header from '../header/Header'
 import MadLibForm from '../mad-lib-form/MadLibForm'
+import MadLibResults from '../mad-lib-results/MadLibResults'
 
 const App = () => {
     const [keyWords, setKeyWords] = useState([])
@@ -11,12 +12,16 @@ const App = () => {
             </header>
             <main>
                 <MadLibForm 
-                    keyWords={keyWords}
+                    keyWords={keyWords} 
+                    setKeyWords={setKeyWords} 
+                />
+                <MadLibResults
+                    keyWords={keyWords} 
                     setKeyWords={setKeyWords}
                 />
             </main>
         </div>
-    );
+		);
 };
 
 export default App;

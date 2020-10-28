@@ -11,14 +11,13 @@ const MadLibForm = ({keyWords, setKeyWords}) => {
     function handleChange(event){
 			setKeyWords({ ...keyWords, [event.target.id]: event.target.value });
         };
-        console.log(keyWords.noun);
+        
     
     function getRhymingWord(){
         // this will have a nested fetch
         // will load url, key, and keyWords when submit is clicked
         const url = `https://wordsapiv1.p.rapidapi.com/words/${keyWords.noun}/rhymes`
         const key = process.env.REACT_APP_RHYME_API_KEY;
-        console.log(url);
         
     fetch(url, {
 			method: 'GET',

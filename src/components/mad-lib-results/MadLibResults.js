@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const MadLibResults = () => {
+const MadLibResults = ({keyWords, setKeyWords}) => {
+    console.log(keyWords.noun);
     return (
         <div>
             

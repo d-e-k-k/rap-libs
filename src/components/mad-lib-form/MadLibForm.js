@@ -38,13 +38,24 @@ const MadLibForm = ({keyWords, setKeyWords, rhymingWords, setRhymingWords}) => {
     }
    
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} id='noun'placeholder='Noun' required/>
-                <button type='submit'>Submit</button>
-            </form>
-        </div>
-    );
+			<div>
+				<form onSubmit={handleSubmit}>
+					<input
+						onChange={handleChange}
+						id='noun'
+						placeholder='Noun'
+						required
+					/>
+					<input
+						onChange={handleChange}
+						id='verb'
+						placeholder='Ing Ending Verb'
+						required
+					/>
+					<button type='submit'>Submit</button>
+				</form>
+			</div>
+		);
 };
 
 export default MadLibForm;

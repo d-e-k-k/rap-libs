@@ -6,14 +6,17 @@ const MadLibResults = ({keyWords, setKeyWords, rhymingWords, setRhymingWords}) =
     console.log(rhymingWords);
     return (
         <div>
-            <p>{`Input:  ${keyWords.noun}`}</p>
+            <p>{`Input Noun:  ${keyWords.noun}`}</p>
             <p>{`Rhyming Word: ${rhymingWords}`}</p>
+            <p>{`Input Verb: ${keyWords.verb}`}</p>
+            <p>{`Rhyming Word: ${''}`}</p>
         </div>
     );
 };
 
 export default MadLibResults;
-// import use state
-// pass down and deconstruct use state
-// results will contain a mad lib with variables interpolated for keywords and rhyming words.
-// when page load it will contain mad lib text with keywords and rhymes
+
+// import use state ##DONE
+// pass down and deconstruct use state ##DONE
+// results will contain a mad lib with variables interpolated for keywords and rhyming words.##DONE
+// when page load it will contain mad lib text with keywords and rhymes ##DONE

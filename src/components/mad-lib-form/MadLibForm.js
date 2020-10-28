@@ -52,7 +52,7 @@ export default MadLibForm;
 // gerneral form sturcture will be created ##DONE
 // starting with one input and one submit button ##DONE
 // state will be updated when form is on change ##DONE
-// getryhing word function will fire when submitted event happends
-//getryhming word will contain a fetch 
-// fetch url will be base with spot for variables: keyWords and key
-//key will be from local storage
+// getryhing word function will fire when submitted event happends ##DONE
+//getryhming word will contain a fetch ##DONE
+// fetch url will be base with spot for variables: keyWords and key##DONE
+//key will be from local storage##DONE

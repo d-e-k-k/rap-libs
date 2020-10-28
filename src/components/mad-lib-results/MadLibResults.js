@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 const MadLibResults = ({keyWords, setKeyWords, rhymingWords, setRhymingWords}) => {
     // console.log(keyWords.noun);
     // console.log(rhymingWords);
-    console.log(rhymingWords);
+    // console.log(rhymingWords);
     return (
         <div>
             <p>{`Input Noun:  ${keyWords.noun}`}</p>

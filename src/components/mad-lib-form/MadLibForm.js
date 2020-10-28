@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
-const MadLibForm = ({keyWords, setKeyWords}) => {
-    
+const MadLibForm = ({keyWords, setKeyWords, rhymingWords, setRhymingWords}) => {
+    // console.log(rhymingWords);
     function handleSubmit(event){
         event.preventDefault();
         console.log('working');
@@ -28,7 +28,9 @@ const MadLibForm = ({keyWords, setKeyWords}) => {
 		})
             .then(res => res.json()
             .then(resJson => {
-                console.log(resJson);
+                setRhymingWords(resJson.rhymes.all[0]);
+                // console.log(resJson.rhymes.all[0]);
+                // console.log(rhymingWords);
             }))
 			.catch((err) => {
 				console.log(err);

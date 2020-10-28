@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 
-const MadLibResults = ({keyWords, setKeyWords}) => {
-    console.log(keyWords.noun);
+const MadLibResults = ({keyWords, setKeyWords, rhymingWords, setRhymingWords}) => {
+    // console.log(keyWords.noun);
+    // console.log(rhymingWords);
+    console.log(rhymingWords);
     return (
         <div>
-            <p>{`Some people call me  ${keyWords.noun}`}</p>
-            <p>{'Others call me $ '}</p>
+            <p>{`Input:  ${keyWords.noun}`}</p>
+            <p>{`Rhyming Word: ${rhymingWords}`}</p>
         </div>
     );
 };

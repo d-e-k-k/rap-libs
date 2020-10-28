@@ -16,13 +16,13 @@ const App = () => {
                     keyWords={keyWords} 
                     setKeyWords={setKeyWords} 
                     rhymingWords={rhymingWords}
-                    setRhymingWords={setKeyWords}
+                    setRhymingWords={setRhymingWords}
                 />
                 <MadLibResults
                     keyWords={keyWords} 
                     setKeyWords={setKeyWords}
                     rhymingWords={rhymingWords}
-                    setRhymingWords={setKeyWords}
+                    setRhymingWords={setRhymingWords}
                 />
             </main>
         </div>

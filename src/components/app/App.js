@@ -10,7 +10,10 @@ const App = () => {
                 <Header />
             </header>
             <main>
-                <MadLibForm />
+                <MadLibForm 
+                    keyWords={keyWords}
+                    setKeyWords={setKeyWords}
+                />
             </main>
         </div>
     );

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const MadLibForm = () => {
+const MadLibForm = ({keyWords, setKeyWords}) => {
     return (
         <div>
             <form>

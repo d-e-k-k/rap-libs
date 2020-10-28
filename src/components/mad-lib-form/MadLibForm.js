@@ -11,7 +11,7 @@ const MadLibForm = ({keyWords, setKeyWords}) => {
     function handleChange(event){
 			setKeyWords({ ...keyWords, [event.target.id]: event.target.value });
         };
-        console.log(keyWords);
+        console.log(keyWords.noun);
     
     function getRhymingWord(){
         // this will have a nested fetch
@@ -20,11 +20,11 @@ const MadLibForm = ({keyWords, setKeyWords}) => {
         const key = process.env.REACT_APP_RHYME_API_KEY;
         console.log(url);
         
-    fetch('https://wordsapiv1.p.rapidapi.com/words/cat/rhymes', {
+    fetch(url, {
 			method: 'GET',
 			headers: {
 				'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com',
-				'x-rapidapi-key': '89a6db89b7mshb1ba6a2857cfcbfp10415bjsn695920ba4946',
+				'x-rapidapi-key': key,
 			},
 		})
             .then(res => res.json()

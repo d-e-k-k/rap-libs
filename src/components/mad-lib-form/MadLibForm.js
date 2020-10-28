@@ -5,13 +5,20 @@ const MadLibForm = ({keyWords, setKeyWords}) => {
     function handleSubmit(event){
         event.preventDefault();
         console.log('working');
+        getRhymingWord();
     }
     
     function handleChange(event){
 			setKeyWords({ ...keyWords, [event.target.id]: event.target.value });
         };
         console.log(keyWords);
-
+    
+    function getRhymingWord(){
+        // this will have a nested fetch
+        // will load url, key, and keyWords when submit is clicked
+        const url = `https://wordsapiv1.p.rapidapi.com/words/${keyWords.noun}/rhymes`
+        console.log(url);
+    }
    
     return (
         <div>
@@ -24,11 +31,11 @@ const MadLibForm = ({keyWords, setKeyWords}) => {
 };
 
 export default MadLibForm;
-// useState will be imported
-// state will be loaded and deconructed
-// gerneral form sturcture will be created
-// starting with one input and one submit button
-// state will be updated when form is submitted
+// useState will be imported ##DONE
+// state will be loaded and deconructed ##DONE
+// gerneral form sturcture will be created ##DONE
+// starting with one input and one submit button ##DONE
+// state will be updated when form is on change ##DONE
 // getryhing word function will fire when submitted event happends
 //getryhming word will contain a fetch 
 // fetch url will be base with spot for variables: keyWords and key

@@ -17,7 +17,23 @@ const MadLibForm = ({keyWords, setKeyWords}) => {
         // this will have a nested fetch
         // will load url, key, and keyWords when submit is clicked
         const url = `https://wordsapiv1.p.rapidapi.com/words/${keyWords.noun}/rhymes`
+        const key = process.env.REACT_APP_RHYME_API_KEY;
         console.log(url);
+        
+    fetch('https://wordsapiv1.p.rapidapi.com/words/cat/rhymes', {
+			method: 'GET',
+			headers: {
+				'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com',
+				'x-rapidapi-key': '89a6db89b7mshb1ba6a2857cfcbfp10415bjsn695920ba4946',
+			},
+		})
+            .then(res => res.json()
+            .then(resJson => {
+                console.log(resJson);
+            }))
+			.catch((err) => {
+				console.log(err);
+			});
     }
    
     return (

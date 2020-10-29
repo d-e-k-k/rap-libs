@@ -5,13 +5,13 @@ const MadLibResults = ({keyWords, setKeyWords, rhymingWords, setRhymingWords}) =
     // console.log(rhymingWords);
     // console.log(rhymingWords);
     return (
-        <div>
-            <p>{`Input Noun:  ${keyWords.noun}`}</p>
-            <p>{`Rhyming Word: ${rhymingWords}`}</p>
-            <p>{`Input Verb: ${keyWords.verb}`}</p>
-            <p>{`Rhyming Word: ${''}`}</p>
-        </div>
-    );
+			<div>
+				<p>{`Input Noun:  ${keyWords.nounOne}`}</p>
+				<p>{`Rhyming Word: ${rhymingWords[0]}`}</p>
+				<p>{`Input Verb: ${keyWords.verbOne}`}</p>
+				<p>{`Rhyming Word: ${rhymingWords[1]}`}</p>
+			</div>
+		);
 };
 
 export default MadLibResults;

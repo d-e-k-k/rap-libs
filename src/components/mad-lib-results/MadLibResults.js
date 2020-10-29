@@ -1,17 +1,24 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-const MadLibResults = ({keyWords, setKeyWords, rhymingWords, setRhymingWords}) => {
-    // console.log(keyWords.noun);
-    // console.log(rhymingWords);
-    // console.log(rhymingWords);
-    return (
-			<div>
-				<p>{`Input Noun:  ${keyWords[0]}`}</p>
-				<p>{`Rhyming Word: ${rhymingWords[0]}`}</p>
-				<p>{`Input Verb: ${keyWords[1]}`}</p>
-				<p>{`Rhyming Word: ${rhymingWords[1]}`}</p>
-			</div>
-		);
+const MadLibResults = ({
+	keyWords,
+	setKeyWords,
+	rhymingWords,
+	setRhymingWords,
+}) => {
+	// console.log(keyWords.noun);
+	// console.log(rhymingWords);
+	// console.log(rhymingWords);
+	return (
+		<div>
+			
+				<p>{`Input 1: ${keyWords[0]}`}</p>
+				<p>{`Rhyme 1: ${rhymingWords[0]}`}</p>
+				<p>{`Input 2: ${keyWords[1]}`}</p>
+				<p>{`Rhyme 2: ${rhymingWords[1]}`}</p>
+			
+		</div>
+	);
 };
 
 export default MadLibResults;

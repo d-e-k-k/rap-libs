@@ -1,50 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const MadLibForm = ({
+	keyWords,
+	setKeyWords,
 	rhymingWords,
 	setRhymingWords,
-	inputOne,
-	setInputOne,
-	inputTwo,
-	setInputTwo,
 }) => {
-	const handleChangeInputOne = (event) => {
-		setInputOne(event.target.value);
+	const handleChange = (event) => {
+		setKeyWords({ ...keyWords, [event.target.id]: event.target.value });
 	};
 
-	const handleChangeInputTwo = (event) => {
-		setInputTwo(event.target.value);
-	};
-
+	function convertKeyWordsToArrayOfValues() {
+		let tempKeyWordValueHolder = [];
+		for (const property in keyWords) {
+			// console.log(keyWords[property]);
+			tempKeyWordValueHolder = [...tempKeyWordValueHolder, keyWords[property]];
+			setKeyWords(tempKeyWordValueHolder);
+		}
+	}
 	function handleSubmit(event) {
 		event.preventDefault();
+		convertKeyWordsToArrayOfValues();
+		let tempRhymingWordsHolder = [];
 		const key = process.env.REACT_APP_RHYME_API_KEY;
-		fetch(`https://wordsapiv1.p.rapidapi.com/words/${inputOne}/rhymes`)
-		.then()
-		
-		
+		for (let i = 0; i < keyWords.length; i++) {
+			const url = `https://wordsapiv1.p.rapidapi.com/words/${keyWords[i]}/rhymes`;
+			fetch(url, {
+				method: 'GET',
+				headers: {
+					'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com',
+					'x-rapidapi-key': key,
+				},
+			})
+				.then((res) => res.json())
+				.then((resJson) => {
+					console.log(resJson);
+					tempRhymingWordsHolder.unshift(resJson.rhymes.all[0]);
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+		}
+		setRhymingWords(tempRhymingWordsHolder);
 	}
 
-	
-
 	return (
-		<div>
-			<form onSubmit={handleSubmit}>
-				<input
-					onChange={handleChangeInputOne}
-					id='input-one'
-					placeholder='Noun'
-					required
-				/>
-				<input
-					onChange={handleChangeInputTwo}
-					id='input-two'
-					placeholder='Ing Eding Verb'
-					required
-				/>
-				<button type='submit'>Submit</button>
-			</form>
-		</div>
+		<form onSubmit={handleSubmit}>
+			<input onChange={handleChange} placeholder='input-one' id='input-one' />
+			<input onChange={handleChange} placeholder='input-two' id='input-two' />
+			<button type='submit'>Submit</button>
+		</form>
 	);
 };
 

@@ -7,8 +7,8 @@ import Test from '../../test/Test';
 const App = () => {
     const [keyWords, setKeyWords] = useState([]);
     const [rhymingWords, setRhymingWords] = useState([]);
-    const[inputOne, setInputOne] = useState();
-    const[inputTwo, setInputTwo] = useState();
+    // const[inputOne, setInputOne] = useState();
+    // const[inputTwo, setInputTwo] = useState();
 
 	return (
 		<div>
@@ -21,10 +21,10 @@ const App = () => {
 					setKeyWords={setKeyWords}
 					rhymingWords={rhymingWords}
                     setRhymingWords={setRhymingWords}
-                    inputOne={inputOne}
-                    setInputOne={setInputOne}
-                    inputTwo={inputTwo}
-                    setInputTwo={setInputTwo}
+                    // inputOne={inputOne}
+                    // setInputOne={setInputOne}
+                    // inputTwo={inputTwo}
+                    // setInputTwo={setInputTwo}
 				/>
 				<MadLibResults
 					keyWords={keyWords}

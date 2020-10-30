@@ -3,20 +3,14 @@ import React from 'react';
 const Input = ({ setValues }) => {
 	function handleBlur(event) {
 		const key = process.env.REACT_APP_RHYME_API_KEY;
-			const url = `https://wordsapiv1.p.rapidapi.com/words/${event.target.value}/rhymes`;
-			fetch(url, {
-				method: 'GET',
-				headers: {
-					'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com',
-					'x-rapidapi-key': key,
-				},
-			})
+			const url = `https://rhymebrain.com/talk?function=getRhymes&word=${event.target.value}`;
+			fetch(url)
 				.then((res) => res.json())
 				.then((resJson) => {
-                    setValues((prevInput) => [...prevInput, {
-                        word: event.target.value,
-                        rhyme: resJson.rhymes.all[0],
-                    }]);
+					setValues((prevInput) => [...prevInput, {
+					    word: event.target.value,
+					    rhyme: resJson[0].word,
+					}]);
 				})
 				.catch((err) => {
 					console.log(err);

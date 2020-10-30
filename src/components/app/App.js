@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import Header from '../header/Header';
-import MadLibForm from '../mad-lib-form/MadLibForm';
 import MadLibResults from '../mad-lib-results/MadLibResults';
-import Test from '../../test/Test';
+import Input from '../input/Input'
 
 const App = () => {
-    const [keyWords, setKeyWords] = useState([]);
-    const [rhymingWords, setRhymingWords] = useState([]);
-    // const[inputOne, setInputOne] = useState();
-    // const[inputTwo, setInputTwo] = useState();
+
+	const [rhymingWords, setRhymingWords] = useState([]);
 
 	return (
 		<div>
@@ -16,22 +13,19 @@ const App = () => {
 				<Header />
 			</header>
 			<main>
-				<MadLibForm
-					keyWords={keyWords}
-					setKeyWords={setKeyWords}
-					rhymingWords={rhymingWords}
-                    setRhymingWords={setRhymingWords}
-                    // inputOne={inputOne}
-                    // setInputOne={setInputOne}
-                    // inputTwo={inputTwo}
-                    // setInputTwo={setInputTwo}
-				/>
-				<MadLibResults
-					keyWords={keyWords}
-					setKeyWords={setKeyWords}
-					rhymingWords={rhymingWords}
-					setRhymingWords={setRhymingWords}
-                />
+				<Input setValues={setRhymingWords} />
+				<Input setValues={setRhymingWords} />
+				<Input setValues={setRhymingWords} />
+				<div>
+					{rhymingWords.map((word) => {
+						return (
+							<p>
+								{word.word} : {word.rhyme}
+							</p>
+						);
+					})}
+				</div>
+
 			</main>
 		</div>
 	);

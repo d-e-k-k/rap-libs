@@ -2,24 +2,33 @@ import React, { useState } from 'react';
 import { Route, Link, Redirect } from 'react-router-dom';
 import Header from '../header/Header';
 import MadLibResults from '../mad-lib-results/MadLibResults';
-import Input from '../input/Input'
+import Input from '../input/Input';
 
 const App = () => {
-
 	const [rhymingWords, setRhymingWords] = useState([]);
+	const [visibleResults, setVisibleResults] = useState(true);
 
+	function toggleResultsVisibility(event) {
+		event.preventDefault();
+		visibleResults ? setVisibleResults(false) : setVisibleResults(true);
+	}
 	return (
 		<div>
 			<header>
 				<Header />
 			</header>
 			<main>
-				<div>
-				<Input setValues={setRhymingWords} />
-				<Input setValues={setRhymingWords} />
-				<MadLibResults rhymingWords={rhymingWords}/>
+				<div className='form-container'>
+					<form onSubmit={toggleResultsVisibility}>
+						<label>Part of the Body: </label>
+						<Input setValues={setRhymingWords} /><br/>
+						<lable>Item of Clothing : </lable>
+						<Input setValues={setRhymingWords} />
+						<Input setValues={setRhymingWords} />
+						<button type='submit'>Show Rap-Lib</button>
+					</form>
 				</div>
-
+				{visibleResults ? <MadLibResults rhymingWords={rhymingWords} /> : null}
 			</main>
 		</div>
 	);

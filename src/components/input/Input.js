@@ -22,7 +22,7 @@ const Input = ({ setValues }) => {
 					console.log(err);
 				});
 	}
-	return <input type='text' onBlur={handleBlur} />;
+	return <input type='text' onBlur={handleBlur} required/>;
 };
 
 export default Input;

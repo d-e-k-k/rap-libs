@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 
-const MadLibResults = ({}) => {
+	
 
+const MadLibResults = ({ keyWords, rhymingWords }) => {
+	
+	
 	return (
 		<div>
-			
-				<p>{`Input 1: ${keyWords[0]}`}</p>
-				<p>{`Rhyme 1: ${rhymingWords[0]}`}</p>
-				<p>{`Input 2: ${keyWords[1]}`}</p>
-				<p>{`Rhyme 2: ${rhymingWords[1]}`}</p>
-			
+			{rhymingWords.map((word) => {
+				return (
+					<p>
+						{word.word} : {word.rhyme}
+					</p>
+				);
+			})}
 		</div>
 	);
 };

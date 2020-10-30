@@ -17,13 +17,7 @@ const App = () => {
 				<div>
 				<Input setValues={setRhymingWords} />
 				<Input setValues={setRhymingWords} />
-					{rhymingWords.map((word) => {
-						return (
-							<p>
-								{word.word} : {word.rhyme}
-							</p>
-						);
-					})}
+				<MadLibResults rhymingWords={rhymingWords}/>
 				</div>
 
 			</main>

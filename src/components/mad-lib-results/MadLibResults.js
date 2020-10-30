@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 
-const MadLibResults = ({
-	keyWords,
-	setKeyWords,
-	rhymingWords,
-	setRhymingWords,
-}) => {
-	// console.log(keyWords.noun);
-	// console.log(rhymingWords);
-	// console.log(rhymingWords);
+const MadLibResults = ({}) => {
+
 	return (
 		<div>
 			

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Route, Link, Redirect } from 'react-router-dom';
 import Header from '../header/Header';
 import MadLibResults from '../mad-lib-results/MadLibResults';
 import Input from '../input/Input'
@@ -13,10 +14,9 @@ const App = () => {
 				<Header />
 			</header>
 			<main>
-				<Input setValues={setRhymingWords} />
-				<Input setValues={setRhymingWords} />
-				<Input setValues={setRhymingWords} />
 				<div>
+				<Input setValues={setRhymingWords} />
+				<Input setValues={setRhymingWords} />
 					{rhymingWords.map((word) => {
 						return (
 							<p>

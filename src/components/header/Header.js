@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div>
-            <h1>Header Placeholder</h1>
+            <h1>Rap-Libs</h1>
         </div>
     );
 };

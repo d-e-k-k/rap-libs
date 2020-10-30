@@ -11,6 +11,7 @@ const App = () => {
 	function toggleResultsVisibility(event) {
 		event.preventDefault();
 		visibleResults ? setVisibleResults(false) : setVisibleResults(true);
+		console.log(event.target);
 	}
 	return (
 		<div>
@@ -21,10 +22,16 @@ const App = () => {
 				<div className='form-container'>
 					<form onSubmit={toggleResultsVisibility}>
 						<label>Part of the Body: </label>
-						<Input setValues={setRhymingWords} /><br/>
+						<Input setValues={setRhymingWords} />
+						<br />
 						<lable>Item of Clothing : </lable>
 						<Input setValues={setRhymingWords} />
+						<br />
+						<label>Animal: </label>
 						<Input setValues={setRhymingWords} />
+						<br />
+						<label>Trash Word: </label>
+						<Input setValues={setRhymingWords} /><br/>
 						<button type='submit'>Show Rap-Lib</button>
 					</form>
 				</div>

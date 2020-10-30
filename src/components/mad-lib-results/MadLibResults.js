@@ -14,7 +14,7 @@ const MadLibResults = ({ rhymingWords }) => {
 					</p>
 				);
 			})} */}
-			{rhymingWords.length > 2 ? (
+			{rhymingWords.length > 3 ? (
 				<div>
 					<p>React is a pain, </p>
 					<p>In the {rhymingWords[0].word}</p>
@@ -22,12 +22,16 @@ const MadLibResults = ({ rhymingWords }) => {
 					<p>And my brain {rhymingWords[0].rhyme}</p>
 					<p>Full of hooks,</p>
 					<p>Like a takle box</p>
-					<p>Update state,</p>
-					<p>like I update my {rhymingWords[1].word}</p>
+					<p>Change your state,</p>
+					<p>Like I change my {rhymingWords[1].word}</p>
 					<p>Change my name,</p>
 					<p>Call me "{rhymingWords[1].rhyme}"</p>
 					<p>Rap game {rhymingWords[2].word}</p>
-					<p>Life game {rhymingWords[2].rhyme}</p>
+					<p>Code game {rhymingWords[2].rhyme}</p>
+					<p>You ain't {rhymingWords[3].word}</p>
+					<p>Not a language</p>
+					<p>Not a framework</p>
+					<p>Not a {rhymingWords[3].rhyme}</p>
 				</div>
 			) : (
 				<p>Rap not created yet</p>

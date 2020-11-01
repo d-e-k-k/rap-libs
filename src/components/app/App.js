@@ -10,6 +10,7 @@ const App = () => {
 	const [visibleResults, setVisibleResults] = useState(true);
 
 
+
 	return (
 		<div>
 			<header>
@@ -21,6 +22,7 @@ const App = () => {
 					visibleResults={visibleResults}
 					setVisibleResults={setVisibleResults}
 					rhymingWords={rhymingWords}
+				
 				/>
 				{visibleResults ? <MadLibResults rhymingWords={rhymingWords} /> : null}
 			</main>

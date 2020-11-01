@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Input = ({ setValues }) => {
+const Input = ({ setRhymingWords }) => {
 	function handleBlur(event) {
 			let inputValueLowerCase = event.target.value.toLowerCase();
 			const url = `https://rhymebrain.com/talk?function=getRhymes&word=${inputValueLowerCase}`;
@@ -12,12 +12,12 @@ const Input = ({ setValues }) => {
 				.then((res) => res.json())
 				.then((resJson) => {
 					if(resJson[0]){
-						setValues((prevInput) => [...prevInput, {
+						setRhymingWords((prevInput) => [...prevInput, {
 							word: event.target.value,
 							rhyme: resJson[0].word,
 						}]);
 					}else{
-						setValues((prevInput) => [
+						setRhymingWords((prevInput) => [
 							...prevInput,
 							{
 								word: 'Chinchilla',

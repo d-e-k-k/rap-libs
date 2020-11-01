@@ -2,22 +2,22 @@
     {
     "key": 111,
     "label": "Part of the Body",
-    "id": "part-of-the-body",    
+    "id": "part-of-the-body"    
     },
     {
     "key": 112,
     "label": "Item of Clothing",
-    "id": "item-of-clothing",    
+    "id": "item-of-clothing"    
     },
     {
     "key": 113,
     "label": "Animal",
-    "id": "animal",    
+    "id": "animal"
     },
     {
     "key": 114,
     "label": "Trash Word",
-    "id": "trash-word",    
-    },
+    "id": "trash-word"    
+    }
    
 ]

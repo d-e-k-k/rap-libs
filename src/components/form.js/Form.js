@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
 import Input from '../input/Input'
+import InputListData from "../../data/inputList.json"
 const Form = ({ setRhymingWords, visibleResults, setVisibleResults }) => {
 
     const[ inputId, setInputId] = useState();
+
     function toggleResultsVisibility(event) {
             event.preventDefault();
             visibleResults ? setVisibleResults(false) : setVisibleResults(true);
             console.log(event.target);
+            console.log(InputListData);
         }
 
         // inputData.map(input => {
@@ -18,7 +21,17 @@ const Form = ({ setRhymingWords, visibleResults, setVisibleResults }) => {
     return (
         <div className='form-container'>
             <form onSubmit={toggleResultsVisibility}>
-                <label>Part of the Body: </label>
+                {InputListData.map(item => {
+                    return(
+                        <div>
+                            <label id={item.id}>{item.label}: </label>
+                            <br/>
+                        </div>
+                        )
+                    }
+                )}
+
+                {/* <label>Part of the Body: </label>
                 <Input setRhymingWords={setRhymingWords} />
                 <br />
                 <label>Item of Clothing : </label>
@@ -29,7 +42,7 @@ const Form = ({ setRhymingWords, visibleResults, setVisibleResults }) => {
                 <br />
                 <label>Trash Word: </label>
                 <Input setRhymingWords={setRhymingWords} />
-                <br />
+                <br /> */}
                 <button type='submit'>Show Rap-Lib</button>
             </form>
         </div>

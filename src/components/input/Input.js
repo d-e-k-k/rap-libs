@@ -1,4 +1,5 @@
 import React from 'react';
+import InputListData from "../../data/inputList.json"
 
 const Input = ({ setRhymingWords }) => {
 	function handleBlur(event) {
@@ -30,7 +31,21 @@ const Input = ({ setRhymingWords }) => {
 					console.log(err);
 				});
 	}
-	return <input type='text' onBlur={handleBlur} required/>;
+	return (
+		<>
+			{InputListData.map(item => {
+				return (
+					<div>
+						<label id={item.id}>{item.label}: </label>
+						<input type='text' onBlur={handleBlur} required />
+						<br />
+					</div>
+				);
+				}
+				)}
+		</>
+	)
+
 };
 
 export default Input;

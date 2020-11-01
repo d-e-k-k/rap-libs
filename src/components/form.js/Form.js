@@ -21,7 +21,8 @@ const Form = ({ setRhymingWords, visibleResults, setVisibleResults }) => {
     return (
         <div className='form-container'>
             <form onSubmit={toggleResultsVisibility}>
-                {InputListData.map(item => {
+                <Input />
+                {/* {InputListData.map(item => {
                     return(
                         <div>
                             <label id={item.id}>{item.label}: </label>
@@ -29,7 +30,7 @@ const Form = ({ setRhymingWords, visibleResults, setVisibleResults }) => {
                         </div>
                         )
                     }
-                )}
+                )} */}
 
                 {/* <label>Part of the Body: </label>
                 <Input setRhymingWords={setRhymingWords} />

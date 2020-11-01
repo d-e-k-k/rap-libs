@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 	
 
 const MadLibResults = ({ rhymingWords }) => {
-	console.log(rhymingWords);
 	
 	return (
 		<div>

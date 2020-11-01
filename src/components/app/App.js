@@ -20,6 +20,7 @@ const App = () => {
 					setRhymingWords={setRhymingWords}
 					visibleResults={visibleResults}
 					setVisibleResults={setVisibleResults}
+					rhymingWords={rhymingWords}
 				/>
 				{visibleResults ? <MadLibResults rhymingWords={rhymingWords} /> : null}
 			</main>

@@ -1,8 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import InputListData from "../../data/inputList.json"
 
+/*
+
+on submit i need event.target.value to fetch for each item.
+which means all of the state has to be updated to this point
+I need an on change to update the state
+*/
+
 const Input = ({ setRhymingWords }) => {
+	// const [tempWord, setTempWord] = useState([]);
+
+	// function handleChange(event){
+	// 	setTempWord({ ...tempWord, [event.target.id]: event.target.value });
+	// }
+
+
 	function handleBlur(event) {
+		// console.log('blur');
 			let inputValueLowerCase = event.target.value.toLowerCase();
 			const url = `https://rhymebrain.com/talk?function=getRhymes&word=${inputValueLowerCase}`;
 			if(!event.target.value){

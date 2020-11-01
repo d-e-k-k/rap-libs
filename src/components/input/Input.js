@@ -35,11 +35,10 @@ const Input = ({ setRhymingWords }) => {
 		<>
 			{InputListData.map(item => {
 				return (
-					<div>
-						<label id={item.id}>{item.label}: </label>
-						<input type='text' onBlur={handleBlur} required />
-						<br />
-					</div>
+					<li key={item.key}>
+						<label htmlFor={item.id}>{item.label}: </label>
+						<input id={item.id} type='text' onBlur={handleBlur} required />
+					</li>
 				);
 				}
 				)}

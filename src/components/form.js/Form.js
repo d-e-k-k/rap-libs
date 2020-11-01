@@ -19,34 +19,14 @@ const Form = ({ setRhymingWords, visibleResults, setVisibleResults }) => {
         // })
 
     return (
-        <div className='form-container'>
-            <form onSubmit={toggleResultsVisibility}>
-                <Input />
-                {/* {InputListData.map(item => {
-                    return(
-                        <div>
-                            <label id={item.id}>{item.label}: </label>
-                            <br/>
-                        </div>
-                        )
-                    }
-                )} */}
-
-                {/* <label>Part of the Body: </label>
-                <Input setRhymingWords={setRhymingWords} />
-                <br />
-                <label>Item of Clothing : </label>
-                <Input setRhymingWords={setRhymingWords} />
-                <br />
-                <label>Animal: </label>
-                <Input setRhymingWords={setRhymingWords} />
-                <br />
-                <label>Trash Word: </label>
-                <Input setRhymingWords={setRhymingWords} />
-                <br /> */}
-                <button type='submit'>Show Rap-Lib</button>
-            </form>
-        </div>
+			<div className='form-container'>
+				<form onSubmit={toggleResultsVisibility}>
+					<ul className='flex-container-ul'>
+						<Input setRhymingWords={setRhymingWords} />
+					<button type='submit'>Show Rap-Lib</button>
+					</ul>
+				</form>
+			</div>
 		);
 };
 

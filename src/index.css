@@ -85,6 +85,12 @@ video {
 	font-size: 100%;
 	font: inherit;
 }
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color: #d0f7ee;
+}
 
 h1 {
 	font-size: 36px;
@@ -106,15 +112,34 @@ header {
 nav {
 	width: 200px;
 }
-nav ul {
-	list-style: none;
+.flex-container-ul li {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	/* flex-wrap: wrap; */
+	align-items: center;
+	/* display: flex; */
+	
+	margin-top: 10px;
+	border: 2px solid seagreen;
+	
+
+}
+.flex-container-ul  li  label {
+	flex: 1 0 20px;
+	max-width: 220px;
+	padding: 8px;
+	font-weight: bold;
+}
+
+.flex-container-ul button{
+	background-color: goldenrod;
 }
 
 .form-container {
-	background-color: lightseagreen;
+	display: flex;
 	width: 70vw;
-	margin-right: auto;
+	max-width: 800px;
+	border: 2px solid black;
 	margin-left: auto;
+	margin-right: auto;
 }

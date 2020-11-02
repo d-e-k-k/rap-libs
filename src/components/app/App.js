@@ -23,6 +23,7 @@ const App = () => {
 					setWords={setWords}
 					InputListData={InputListData}
 					setRapDisplayed={setRapDisplayed}
+					rapDisplayed={rapDisplayed}
 				/>
 				<MadLibResults
 					parent={parent}

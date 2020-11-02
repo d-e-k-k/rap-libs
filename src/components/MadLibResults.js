@@ -3,17 +3,14 @@ import React, { useEffect } from 'react';
 const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
 
 
-
 	return (
 		<div>
-			{rapDisplayed ? (
-				<div>
-					<p>React is a pain, </p>
-				</div>
-			) : null}
+			
 		</div>
 	);
 };
+
+
 
 export default MadLibResults;
 // import React, { useState } from 'react';
@@ -27,7 +24,7 @@ export default MadLibResults;
 // // 			{/* {parent.length > 3 ? (
 // // 				<div>
 // // 					<p>React is a pain, </p> */}
-// // 					{/* <p>In the {parent[0].word}</p> */}
+// // 					{/* <p>In the {}</p> */}
 // // 					{/* <p>It made my week long,</p>
 // // 					<p>And my brain {parent[0].rhyme}</p>
 // // 					<p>Full of hooks,</p>

@@ -15,12 +15,12 @@ const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
 					<p>And my brain {parent[0].rhymingWord}</p>
 					<br />
 					<p>Change your state,</p>
-					<p>Like I change my {parent[1].userInput}</p>
+					<p>Like I change my {parent[1].userInput}.</p>
 					<p>Change my name,</p>
 					<p>Call me "{parent[1].rhymingWord}"</p>
 					<br />
 					<p>Full of hooks,</p>
-					<p>Like a takle box</p>
+					<p>Like a takle box.</p>
 					<p>Full of lingo,</p>
 					<p>Where-ya docs?</p>
 					<br />

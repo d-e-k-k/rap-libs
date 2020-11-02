@@ -2,14 +2,11 @@ import React, { useState } from 'react';
 import { Route, Link, Redirect } from 'react-router-dom';
 import Header from '../header/Header';
 import MadLibResults from '../MadLibResults';
-import Input from '../input-and-label/InputAndLabel';
 import Form from '../form.js/Form';
 
 const App = () => {
-	const [rhymingWords, setRhymingWords] = useState([]);
-	const [visibleResults, setVisibleResults] = useState(true);
-
-
+	const [parent, setParent] = useState([]);
+	const [words, setWords] = useState([]);
 
 	return (
 		<div>
@@ -18,13 +15,11 @@ const App = () => {
 			</header>
 			<main>
 				<Form
-					setRhymingWords={setRhymingWords}
-					visibleResults={visibleResults}
-					setVisibleResults={setVisibleResults}
-					rhymingWords={rhymingWords}
-				
+					parent={parent}
+					setParent={setParent}
+					words={words}
+					setWords={setWords}
 				/>
-				{visibleResults ? <MadLibResults rhymingWords={rhymingWords} /> : null}
 			</main>
 		</div>
 	);

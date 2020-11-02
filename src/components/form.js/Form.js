@@ -3,9 +3,9 @@ import InputAndLabel from '../input-and-label/InputAndLabel';
 import InputListData from '../../data/inputList.json';
 import MadLibResults from '../MadLibResults';
 
-const Form = ({ setRhymingWords, visibleResults, setVisibleResults }) => {
-	const [parent, setParent] = useState([]);
-	const [words, setWords] = useState([]);
+const Form = ({ parent, setParent, words, setWords }) => {
+	// const [parent, setParent] = useState([]);
+	// const [words, setWords] = useState([]);
 
 	// function handleChange(event) {
 	// 	setWords({ ...words, [event.target.id]: event.target.value });

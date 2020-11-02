@@ -3,6 +3,8 @@ import { Route, Link, Redirect } from 'react-router-dom';
 import Header from '../header/Header';
 import MadLibResults from '../MadLibResults';
 import Form from '../form.js/Form';
+import InputListData from '../../data/inputList.json';
+import InputAndLabel from '../input-and-label/InputAndLabel';
 
 const App = () => {
 	const [parent, setParent] = useState([]);
@@ -19,7 +21,9 @@ const App = () => {
 					setParent={setParent}
 					words={words}
 					setWords={setWords}
+					InputListData={InputListData}
 				/>
+				<MadLibResults parent={parent} InputListData={InputListData} />
 			</main>
 		</div>
 	);

@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import StillB from '../songs/StillB.mp3'
 
 const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
 
 	return (
-		<div className="results">
+		<div className='results'>
 			{rapDisplayed ? (
 				<div>
 					<audio controls>
@@ -35,6 +35,11 @@ const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
 					<p>Try context</p>
 					<p>And surely fown</p>
 					<br />
+					<p>Don't stay mute</p>
+					<p>Get on git</p>
+					<p>And contribute</p>
+					<p>To the ./root</p>
+					<br />
 					<p>
 						Song Credits: "Still Blazin" - Rap Freestyle Type Beat | Underground
 						Boom Bap Type Beat | Anabolic Beatz
@@ -45,47 +50,6 @@ const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
 	);
 };
 
-// "Still Blazin" - Rap Freestyle Type Beat | Underground Boom Bap Type Beat | Anabolic Beatz
+// Copywrite for non-comercial uses music from: "Still Blazin" - Rap Freestyle Type Beat | Underground Boom Bap Type Beat | Anabolic Beatz | https://www.youtube.com/watch?v=KPWcnd5J60s&list=UUsdTY8O8fMWJ_m4nNpy9JZg&index=1
 
 export default MadLibResults;
-// import React, { useState } from 'react';
-
-	
-
-// const MadLibResults = ({ parent }) => {
-	
-// 	return ()
-// // 		<div>
-// // 			{/* {parent.length > 3 ? (
-// // 				<div>
-// // 					<p>React is a pain, </p> */}
-// // 					{/* <p>In the {}</p> */}
-// // 					{/* <p>It made my week long,</p>
-// // 					<p>And my brain {}</p>
-// // 					<p>Full of hooks,</p>
-// // 					<p>Like a takle box</p>
-// // 					<p>Change your state,</p>
-// // 					<p>Like I change my {parent[1].userInput}</p>
-// // 					<p>Change my name,</p>
-// // 					<p>Call me "{parent[0].rhymingWord}"</p>
-// // 					<p>Rap game {parent[2].userInput}</p>
-// // 					<p>Code game {parent[2].rhymingWord}</p>
-// // 					<p>You ain't {parent[3].word}</p>
-// // 					<p>Not a language</p>
-// // 					<p>Not a framework</p>
-// // 					<p>Not a {parent[3].rhyme}</p> */}
-// // 				{/* </div>
-// // 			) : (
-// // 				<p>Rap not created yet</p>
-// // 			)} */}
-// // 		</div>
-// // 	);
-// // };
-	
-// };
-// export default MadLibResults;
-
-// // import use state ##DONE
-// // pass down and deconstruct use state ##DONE
-// // results will contain a mad lib with variables interpolated for keywords and rhyming words.##DONE
-// // when page load it will contain mad lib text with keywords and rhymes ##DONE

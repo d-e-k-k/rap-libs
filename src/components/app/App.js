@@ -9,6 +9,7 @@ const App = () => {
 	const [words, setWords] = useState([]);
 	const [rapSubmitted, setRapSubmitted] = useState(false);
 	const [rapDisplayed, setRapDisplayed] = useState(false);
+	const [errorStatus, setErrorStatus] = useState(false);
 
 	return (
 		<div>
@@ -23,6 +24,8 @@ const App = () => {
 					setRapSubmitted={setRapSubmitted}
 					rapDisplayed={rapDisplayed}
 					setRapDisplayed={setRapDisplayed}
+					errorStatus={errorStatus}
+					setErrorObj={setErrorStatus}
 				/>
 				<MadLibResults
 					parent={parent}

@@ -11,7 +11,10 @@ const Form = ({
     rapSubmitted,
     setRapSubmitted,
     rapDisplayed,
-    setRapDisplayed
+    setRapDisplayed,
+    errorStatus,
+    setErrorStatus,
+    
 }) => {
 	function handleSubmit(event) {
 		event.preventDefault();
@@ -30,7 +33,10 @@ const Form = ({
 							rhymingWord: resJson[0].word,
                         },
 					]);
-				});
+                })
+                .catch(err => {
+                    setErrorStatus(true)
+                })
 		}
 	}
 
@@ -49,6 +55,7 @@ const Form = ({
 
 	return (
 		<div className='form-container'>
+            {errorStatus ? <h2>You have a problem Chief</h2> : null}
 			<form onSubmit={handleSubmit}>
                 <h1>Rap-Libs</h1>
 				<InputAndLabel
@@ -60,7 +67,7 @@ const Form = ({
 				<button type='reset' onClick={handleReset}>
 					Reset
 				</button>
-                {rapSubmitted ? 
+                {rapSubmitted && parent.length >= InputListData.length ? 
                     <button type='button' onClick={showRap}>Show Rap!</button>
                     : null
                 }

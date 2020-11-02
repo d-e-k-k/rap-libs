@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import InputAndLabel from '../input-and-label/InputAndLabel';
 
@@ -27,7 +28,7 @@ const Form = ({
 						{
 							userInput: `${words[property]}`,
 							rhymingWord: resJson[0].word,
-						},
+                        },
 					]);
 				});
 		}
@@ -49,6 +50,7 @@ const Form = ({
 	return (
 		<div className='form-container'>
 			<form onSubmit={handleSubmit}>
+                <h1>Rap-Libs</h1>
 				<InputAndLabel
 					InputListData={InputListData}
 					words={words}

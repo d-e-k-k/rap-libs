@@ -89,11 +89,15 @@ video {
 	box-sizing: border-box;
 }
 body{
-	background-color: #d0f7ee;
+	 background: rgb(107,25,135);
+background: radial-gradient(circle, rgba(107,25,135,1) 0%, rgba(194,148,233,1) 100%); 
+/* Background attribuiton to : https://cssgradient.io/ & Rodrigo Pereira */
 }
 
 h1 {
 	font-size: 36px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 h2 {
@@ -112,34 +116,59 @@ header {
 nav {
 	width: 200px;
 }
-.flex-container-ul li {
+
+ul {
+	list-style: none;
+}
+
+.form-container, .results {
 	display: flex;
 	justify-content: center;
-	/* flex-wrap: wrap; */
-	align-items: center;
-	/* display: flex; */
-	
-	margin-top: 10px;
-	border: 2px solid seagreen;
-	
-
-}
-.flex-container-ul  li  label {
-	flex: 1 0 20px;
-	max-width: 220px;
-	padding: 8px;
-	font-weight: bold;
 }
 
-.flex-container-ul button{
-	background-color: goldenrod;
-}
-
-.form-container {
-	display: flex;
+form{
+	margin-top: 20px;
 	width: 70vw;
-	max-width: 800px;
-	border: 2px solid black;
-	margin-left: auto;
-	margin-right: auto;
+	max-width: 700px;
+	height: 500px;
+	background-color: rgba(0, 0, 0, .3);
+	font-size: 20px; 
+	color: white;
+	padding: 20px;
+	border: solid 10px rgba(0, 0, 0, .3);
+	border-radius: 10px;
 }
+
+form input {
+	height: 30px;
+	font-size: 20px;
+}
+
+
+
+form li{
+	display: flex;
+  	flex-wrap: wrap;
+	align-items: center;
+	padding: 10px;
+}
+
+form label {
+	flex: 1 0 120px;
+  	max-width: 220px;
+}
+
+form button{
+	width: 30%;
+	height: 35px;
+	background-color: white;
+	transition: 0.3s;
+}
+
+form button:hover {
+	font-weight: bold;
+	background-color: salmon;
+	color: white;
+}
+
+/* Form styling attribution: George Martsoukos @ https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767 */

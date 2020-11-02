@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
+const MadLibResults = ({ parent, InputListData, rapSubmitted }) => {
 
 
 	return (

@@ -8,6 +8,7 @@ import InputListData from '../../data/inputList.json';
 const App = () => {
 	const [parent, setParent] = useState([]);
 	const [words, setWords] = useState([]);
+	const [rapSubmitted, setRapSubmitted] = useState(false);
 	const [rapDisplayed, setRapDisplayed] = useState(false);
 
 	return (
@@ -22,12 +23,15 @@ const App = () => {
 					words={words}
 					setWords={setWords}
 					InputListData={InputListData}
-					setRapDisplayed={setRapDisplayed}
+					rapSubmitted={rapSubmitted}
+					setRapSubmitted={setRapSubmitted}
 					rapDisplayed={rapDisplayed}
+					setRapDisplayed={setRapDisplayed}
 				/>
 				<MadLibResults
 					parent={parent}
 					InputListData={InputListData}
+					rapSubmitted={rapSubmitted}
 					rapDisplayed={rapDisplayed}
 				/>
 			</main>

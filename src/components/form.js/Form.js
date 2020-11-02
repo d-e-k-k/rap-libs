@@ -7,12 +7,14 @@ const Form = ({
 	words,
 	setWords,
 	InputListData,
-	rapDisplayed,
-	setRapDisplayed,
+    rapSubmitted,
+    setRapSubmitted,
+    rapDisplayed,
+    setRapDisplayed
 }) => {
 	function handleSubmit(event) {
 		event.preventDefault();
-		setRapDisplayed(true);
+		setRapSubmitted(true);
 
 		for (const property in words) {
 			const url = `https://rhymebrain.com/talk?function=getRhymes&word=${words[property]}`;
@@ -34,8 +36,15 @@ const Form = ({
 	function handleReset(event) {
 		setParent([]);
 		setWords([]);
-		setRapDisplayed(false);
-	}
+        setRapSubmitted(false);
+        setRapDisplayed(false);
+    }
+
+    function showRap(){
+        setRapDisplayed(true);
+    }
+    
+
 
 	return (
 		<div className='form-container'>
@@ -49,8 +58,8 @@ const Form = ({
 				<button type='reset' onClick={handleReset}>
 					Reset
 				</button>
-                {rapDisplayed ? 
-                    <button type='button'>Show Rap!</button>
+                {rapSubmitted ? 
+                    <button type='button' onClick={showRap}>Show Rap!</button>
                     : null
                 }
 			</form>

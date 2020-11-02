@@ -1,8 +1,7 @@
 import React from 'react';
-import StillB from '../songs/StillB.mp3'
+import StillB from '../songs/StillB.mp3';
 
 const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
-
 	return (
 		<div className='results'>
 			{rapDisplayed ? (
@@ -30,10 +29,10 @@ const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
 					<p>useState {parent[3].userInput}</p>
 					<p>useEffect {parent[3].rhymingWord}</p>
 					<br />
-					<p>No new props</p>
+					<p>No new props,</p>
 					<p>Just hand-me-downs</p>
-					<p>Try context</p>
-					<p>And surely fown</p>
+					<p>Try context,</p>
+					<p>And surely frown</p>
 					<br />
 					<p>Don't stay mute</p>
 					<p>Get on git</p>

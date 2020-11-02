@@ -4,11 +4,11 @@ import Header from '../header/Header';
 import MadLibResults from '../MadLibResults';
 import Form from '../form.js/Form';
 import InputListData from '../../data/inputList.json';
-import InputAndLabel from '../input-and-label/InputAndLabel';
 
 const App = () => {
 	const [parent, setParent] = useState([]);
 	const [words, setWords] = useState([]);
+	const [rapDisplayed, setRapDisplayed] = useState(false);
 
 	return (
 		<div>
@@ -22,8 +22,13 @@ const App = () => {
 					words={words}
 					setWords={setWords}
 					InputListData={InputListData}
+					setRapDisplayed={setRapDisplayed}
 				/>
-				<MadLibResults parent={parent} InputListData={InputListData} />
+				<MadLibResults
+					parent={parent}
+					InputListData={InputListData}
+					rapDisplayed={rapDisplayed}
+				/>
 			</main>
 		</div>
 	);

@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const MadLibResults = ({ parent, InputListData }) => {
+const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
+
+
+
 	return (
 		<div>
-			{parent && parent.length === InputListData.length ? (
-				<p>nothing</p>
-			) : (
-				<p>parent contains items</p>
-			)}
-			
+			{rapDisplayed ? (
+				<div>
+					<p>React is a pain, </p>
+				</div>
+			) : null}
 		</div>
 	);
 };

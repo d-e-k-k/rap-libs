@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Route, Link, Redirect } from 'react-router-dom';
 import Header from '../header/Header';
 import MadLibResults from '../MadLibResults';
-import Input from '../input/Input';
+import Input from '../input-and-label/InputAndLabel';
 import Form from '../form.js/Form';
 
 const App = () => {

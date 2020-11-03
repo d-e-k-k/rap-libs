@@ -12,12 +12,12 @@ const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
 					<p>React is a pain, </p>
 					<p>In the {parent[0].userInput}</p>
 					<p>It made my week long,</p>
-					<p>And my brain {parent[0].rhymingWord}</p>
+					<p>And my brain {parent[0].rhymingWord[Math.floor(Math.random()*5)]}</p>
 					<br />
 					<p>Change your state,</p>
 					<p>Like I change my {parent[1].userInput}.</p>
 					<p>Change my name,</p>
-					<p>Call me "{parent[1].rhymingWord}"</p>
+					<p>Call me "{parent[1].rhymingWord[Math.floor(Math.random()*5)]}"</p>
 					<br />
 					<p>Full of hooks,</p>
 					<p>Like a takle box.</p>
@@ -25,9 +25,9 @@ const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
 					<p>Where-ya docs?</p>
 					<br />
 					<p>Rap game {parent[2].userInput}</p>
-					<p>Code game {parent[2].rhymingWord}</p>
+					<p>Code game {parent[2].rhymingWord[Math.floor(Math.random()*5)]}</p>
 					<p>useState {parent[3].userInput}</p>
-					<p>useEffect {parent[3].rhymingWord}</p>
+					<p>useEffect {parent[3].rhymingWord[Math.floor(Math.random()*5)]}</p>
 					<br />
 					<p>No new props,</p>
 					<p>Just hand-me-downs</p>

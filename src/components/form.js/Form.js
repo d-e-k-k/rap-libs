@@ -30,8 +30,14 @@ const Form = ({
 						...prevWords,
 						{
 							userInput: `${words[property]}`,
-							rhymingWord: resJson[0].word,
-                        },
+							rhymingWord: [
+								resJson[0].word,
+								resJson[1].word,
+								resJson[2].word,
+								resJson[3].word,
+								resJson[4].word,
+							],
+						},
 					]);
                 })
                 .catch(err => {

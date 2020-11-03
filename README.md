@@ -19,17 +19,28 @@ This project needed to be built with React. Instead of building one of the more 
 
 ## APIs
 #### Rhyme Brain API : https://rhymebrain.com/api.html
-I ended up using Rhyme Brain after starting with WordsAPI. Here is why I chose Rhyme Brain ove WordsAPI
-|           |Rhyme Brain| WordsAPI|
-| --------- | --------- | ------- |
-|  Cost     |  Free     | FreeIsh* |
-|  Call Rate Limit    |  350/hr   | 2,500/day|
-|  Key Required | No | Yes |
-| Quality of Return Data| High| Medium/Low |
+I ended up using Rhyme Brain after starting with WordsAPI. After looking at the info below, which would you choose? For me and my needs, Rhyme Brain was the winner. 
+|                        | Rhyme Brain | WordsAPI   |
+| ----                   | ----        | ----       |
+| Cost                   | Free        | FreeIsh*   |
+| Call Rate Limit        | 350/hr      | 2,500/day  |
+| Key Required           | No          | Yes        |
+| Quality of Return Data | High        | Medium/Low |
 
 
 *WordsAPI is free under 2,500 calls per day but **requires account with CC on file**. Over 2,500 and you **will be charged per each additional call**
 #### WordsAPI
+
+
+#### Amount of Word Matches/Returned Words
+
+| Input        | Rhyme Brain Matches | WordsAPI Matches |
+| ----         | ----                | ----             |
+| Dog          | 243                 | 31               |
+| Happy        | 500                 | 16               |
+| Running      | 500                 | 11               |
+| Derek        | 403                 | 1                |
+| Rambunctious | 500                 | 1                |
 
 ## Instillation Instructions
 - Fork and Clone down the repo

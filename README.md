@@ -27,7 +27,7 @@ I ended up using Rhyme Brain after starting with WordsAPI. After looking at the 
 | Key Required           | No          | Yes        |
 | Quality of Return Data | High        | Medium/Low |
 
-*WordsAPI is free under 2,500 calls per day but **requires account with CC on file**. Over 2,500 and you **will be charged per each additional call**
+*WordsAPI is free under 2,500 calls per day but **requires an account with credit card on file**. Over 2,500 and you **will be charged per each additional call**
 
 #### Amount of Word Matches/Returned Words
 

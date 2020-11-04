@@ -2,7 +2,7 @@ import React from 'react';
 
 const InputAndLabel = ({ InputListData, words, setWords }) => {
 	function handleChange(event) {
-		setWords({ ...words, [event.target.id]: event.target.value });
+		setWords({ ...words, [event.target.id]: event.target.value.toLowerCase() });
 	}
 
 	return (

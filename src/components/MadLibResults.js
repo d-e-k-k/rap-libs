@@ -5,7 +5,7 @@ const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
 	return (
 		<div className='results'>
 			{rapDisplayed ? (
-				<div>
+				<div className='results-inner'>
 					<audio controls>
 						<source src={StillB} type='audio/mpeg' />
 					</audio>

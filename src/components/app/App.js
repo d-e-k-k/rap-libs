@@ -32,6 +32,7 @@ const App = () => {
 					InputListData={InputListData}
 					rapSubmitted={rapSubmitted}
 					rapDisplayed={rapDisplayed}
+					InputListData={InputListData}
 				/>
 			</main>
 		</div>

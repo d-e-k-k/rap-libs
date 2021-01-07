@@ -151,7 +151,7 @@ audio{
 
 form{
 	margin-top: 20px;
-	width: 70vw;
+	width: 70%;
 	max-width: 700px;
 	height: 500px;
 	background-color: rgba(0, 0, 0, .3);
@@ -161,6 +161,17 @@ form{
 	border: solid 10px rgba(0, 0, 0, .3);
 	border-radius: 10px;
 }
+
+
+@media only screen and (max-width: 600px) {
+  form{
+	  margin-top: 0;
+	  width: 100%;
+	  border: none;
+	  border-radius: 0;
+  }
+}
+
 
 form input {
 	height: 30px;
@@ -184,12 +195,13 @@ form label {
 }
 
 .btn-container{
+	margin-top: 20px;
 	display: flex;
 	justify-content: space-evenly;
 }
 
 form button{
-	width: 30%;
+	width: 8rem;
 	height: 35px;
 	background-color: white;
 	transition: 0.3s;

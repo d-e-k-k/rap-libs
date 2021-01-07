@@ -85,13 +85,17 @@ video {
 	font-size: 100%;
 	font: inherit;
 }
-*{
+* {
 	box-sizing: border-box;
 }
-body{
-	 background: rgb(107,25,135);
-background: radial-gradient(circle, rgba(107,25,135,1) 0%, rgba(194,148,233,1) 100%); 
-/* Background attribuiton to : https://cssgradient.io/ & Rodrigo Pereira */
+body {
+	background: rgb(107, 25, 135);
+	background: radial-gradient(
+		circle,
+		rgba(107, 25, 135, 1) 0%,
+		rgba(194, 148, 233, 1) 100%
+	);
+	/* Background attribuiton to : https://cssgradient.io/ & Rodrigo Pereira */
 }
 
 h1 {
@@ -124,54 +128,67 @@ ul {
 .form-container {
 	display: flex;
 	justify-content: center;
+	/* width: 100%; */
 }
 
 .results {
 	display: flex;
 	justify-content: center;
-	
 }
 
-.results-inner{
+.results-inner {
 	margin-top: 40px;
 	color: white;
 	font-size: 1.3em;
-	background-color: rgba(0, 0, 0, .3);
+	background-color: rgba(0, 0, 0, 0.3);
 	text-align: center;
-	border: solid 10px rgba(0, 0, 0, .3);
+	border: solid 10px rgba(0, 0, 0, 0.3);
 	border-radius: 10px;
 	width: 70vw;
 	max-width: 700px;
 }
 
-audio{
+audio {
 	margin-bottom: 30px;
 	margin-top: 30px;
 }
 
-form{
+form {
 	margin-top: 20px;
 	width: 70%;
 	max-width: 700px;
 	height: 500px;
-	background-color: rgba(0, 0, 0, .3);
-	font-size: 20px; 
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 20px;
 	color: white;
 	padding: 20px;
-	border: solid 10px rgba(0, 0, 0, .3);
+	border: solid 10px rgba(0, 0, 0, 0.3);
 	border-radius: 10px;
 }
 
-
 @media only screen and (max-width: 600px) {
-  form{
-	  margin-top: 0;
-	  width: 100%;
-	  border: none;
-	  border-radius: 0;
-  }
-}
+	form {
+		margin-top: 0;
+		width: 100%;
+		border: none;
+		border-radius: 0;
+		background-color: rgba(0, 0, 0, 0);
+	}
 
+	.results-inner {
+		margin-top: 0;
+		color: white;
+		font-size: 1.3em;
+		text-align: center;
+		border: none;
+		border-radius: 0;
+		width: 100%;
+		max-width: 700px;
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	
+}
 
 form input {
 	height: 30px;
@@ -180,27 +197,25 @@ form input {
 	max-width: 350px;
 }
 
-
-
-form li{
+form li {
 	display: flex;
-  	flex-wrap: wrap;
+	flex-wrap: wrap;
 	align-items: center;
 	padding: 10px;
 }
 
 form label {
 	flex: 1 0 120px;
-  	max-width: 220px;
+	max-width: 220px;
 }
 
-.btn-container{
+.btn-container {
 	margin-top: 20px;
 	display: flex;
 	justify-content: space-evenly;
 }
 
-form button{
+form button {
 	width: 8rem;
 	height: 35px;
 	background-color: white;

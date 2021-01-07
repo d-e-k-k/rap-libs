@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import InputAndLabel from '../input-and-label/InputAndLabel';
 
@@ -8,13 +7,12 @@ const Form = ({
 	words,
 	setWords,
 	InputListData,
-    rapSubmitted,
-    setRapSubmitted,
-    rapDisplayed,
-    setRapDisplayed,
-    errorStatus,
-    setErrorStatus,
-    
+	rapSubmitted,
+	setRapSubmitted,
+	rapDisplayed,
+	setRapDisplayed,
+	errorStatus,
+	setErrorStatus,
 }) => {
 	function handleSubmit(event) {
 		event.preventDefault();
@@ -39,44 +37,45 @@ const Form = ({
 							],
 						},
 					]);
-                })
-                .catch(err => {
-                    setErrorStatus(true)
-                })
+				})
+				.catch((err) => {
+					setErrorStatus(true);
+				});
 		}
 	}
 
 	function handleReset(event) {
 		setParent([]);
 		setWords([]);
-        setRapSubmitted(false);
-        setRapDisplayed(false);
-    }
+		setRapSubmitted(false);
+		setRapDisplayed(false);
+	}
 
-    function showRap(){
-        setRapDisplayed(true);
-    }
-    
-
+	function showRap() {
+		setRapDisplayed(true);
+	}
 
 	return (
 		<div className='form-container'>
-            {errorStatus ? <h2>You have a problem Chief</h2> : null}
+			{errorStatus ? <h2>You have a problem Chief</h2> : null}
 			<form onSubmit={handleSubmit}>
-                <h1>Rap-Libs</h1>
+				<h1>Rap-Libs</h1>
 				<InputAndLabel
 					InputListData={InputListData}
 					words={words}
 					setWords={setWords}
 				/>
-				<button type='submit'>Submit</button>
-				<button type='reset' onClick={handleReset}>
-					Reset
-				</button>
-                {rapSubmitted && parent.length >= InputListData.length ? 
-                    <button type='button' onClick={showRap}>Show Rap!</button>
-                    : null
-                }
+				<div className="btn-container">
+					<button type='submit'>Submit</button>
+					<button type='reset' onClick={handleReset}>
+						Reset
+					</button>
+					{rapSubmitted && parent.length >= InputListData.length ? (
+						<button type='button' onClick={showRap}>
+							Show Rap!
+						</button>
+					) : null}
+				</div>
 			</form>
 		</div>
 	);

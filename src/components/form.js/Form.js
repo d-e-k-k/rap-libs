@@ -45,8 +45,6 @@ const Form = ({
 	function handleReset(event) {
 		setParent([]);
 		setWords([]);
-		setRapSubmitted(false);
-		setRapDisplayed(false);
 	}
 
 

@@ -7,9 +7,7 @@ const Form = ({
 	words,
 	setWords,
 	InputListData,
-	rapSubmitted,
 	setRapSubmitted,
-	rapDisplayed,
 	setRapDisplayed,
 	errorStatus,
 	setErrorStatus,
@@ -47,13 +45,8 @@ const Form = ({
 	function handleReset(event) {
 		setParent([]);
 		setWords([]);
-		setRapSubmitted(false);
-		setRapDisplayed(false);
 	}
 
-	function showRap() {
-		setRapDisplayed(true);
-	}
 
 	return (
 		<div className='form-container'>
@@ -70,11 +63,6 @@ const Form = ({
 					<button type='reset' onClick={handleReset}>
 						Reset
 					</button>
-					{rapSubmitted && parent.length >= InputListData.length ? (
-						<button type='button' onClick={showRap}>
-							Show Rap!
-						</button>
-					) : null}
 				</div>
 			</form>
 		</div>

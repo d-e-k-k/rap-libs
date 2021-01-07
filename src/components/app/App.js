@@ -8,7 +8,6 @@ const App = () => {
 	const [parent, setParent] = useState([]);
 	const [words, setWords] = useState([]);
 	const [rapSubmitted, setRapSubmitted] = useState(false);
-	const [rapDisplayed, setRapDisplayed] = useState(false);
 	const [errorStatus, setErrorStatus] = useState(false);
 
 	return (
@@ -22,8 +21,6 @@ const App = () => {
 					InputListData={InputListData}
 					rapSubmitted={rapSubmitted}
 					setRapSubmitted={setRapSubmitted}
-					rapDisplayed={rapDisplayed}
-					setRapDisplayed={setRapDisplayed}
 					errorStatus={errorStatus}
 					setErrorObj={setErrorStatus}
 				/>
@@ -31,7 +28,6 @@ const App = () => {
 					parent={parent}
 					InputListData={InputListData}
 					rapSubmitted={rapSubmitted}
-					rapDisplayed={rapDisplayed}
 					InputListData={InputListData}
 				/>
 			</main>

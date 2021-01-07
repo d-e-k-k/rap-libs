@@ -1,7 +1,7 @@
 import React from 'react';
 import StillB from '../songs/StillB.mp3';
 
-const MadLibResults = ({ parent, InputListData, rapDisplayed }) => {
+const MadLibResults = ({ parent, InputListData }) => {
 	console.log(InputListData.length);
 	return (
 		<div className='results'>

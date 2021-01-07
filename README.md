@@ -5,7 +5,7 @@ Rap-Libs is a mad-lib style rap generator. Type in some responses and see where 
 
 ## Screen Shot
 
-![](images/screenshot.png)
+![image](https://user-images.githubusercontent.com/71715721/103944108-299e7600-5101-11eb-96da-9eefb29410f8.png)
 
 ## Why this project?
 
